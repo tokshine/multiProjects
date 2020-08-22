@@ -7,11 +7,16 @@ using Xamarin.Forms;
 
 namespace MultiProjects
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPageView : ContentPage
     {
-        public MainPage()
+        public MainPageView()
         {
             InitializeComponent();
         }
+
+        //private void DemoButton_Clicked(object sender, EventArgs e)
+        //{
+        //    DemoButton.Text = "You clicked me";
+        //}
     }
 }
