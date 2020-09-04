@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MultiProjects.ControlTemplate;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -18,7 +19,7 @@ namespace MultiProjects
 
             //MainPage = new NavigationPage(new NavigationPageView());
             //MainPage = new TabbedPageView();//icons are visible
-           //MainPage = new CarouselPageView();//use case list of images ??
+            //MainPage = new CarouselPageView();//use case list of images ??
             //MainPage = new MasterDetailPageView();handburger approach
 
             // MainPage = new ModalPageView();
@@ -32,9 +33,21 @@ namespace MultiProjects
 
             //MainPage = new LoginPageWithStyling();//with different kind of styling |remember to enable styling in app.xaml --- DynamicResource
 
-           MainPage = new ShivonetLogin();
+            //  MainPage = new ShivonetLogin();
 
+            // MainPage = new FramedTextPage();
+
+            //MainPage = new Cards();
+            //use of control template ,template was applied to Cards page https://www.youtube.com/watch?v=oah-Q1kPOyI
+            //note CardViewControlTemplate is not in use yet
+            //my template is directly in cards.xaml
+            //TODO:it would be good to separate the template into a file is it possible ??
+
+            // In fact, the TemplateBinding markup extension creates a Binding whose Source is RelativeBindingSource.TemplatedParent
+            //TemplateBinding is an alternative for  RelativeBindingSource.TemplatedParent
             //MainPage = new RoundEdges();//lovely working using custom renderer
+       
+           MainPage = new CardBindToViewModel();
         }
 
         protected override void OnStart()
