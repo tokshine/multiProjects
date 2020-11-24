@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MultiProjects.SummaryResult">
+    <ContentPage.Content>
+
+        <StackLayout Margin="20,5,10,10">
+            <Label Text="Quiz Result"
+               
+                HorizontalOptions="CenterAndExpand"
+                   HorizontalTextAlignment="Center"
+                   FontSize="30"
+                 />
+            <StackLayout Margin="20,20,10,10">
+              
+            
+            <Label Text="Correct"
+                   x:Name="lblCorrect"
+                VerticalOptions="StartAndExpand"
+                   FontSize="25"
+                 />
+            <Label Text="Incorrect"
+                   x:Name="lblIncorrect"
+                VerticalOptions="StartAndExpand"
+                   FontSize="25"
+                 />
+            <Label Text="Flagged"
+                   x:Name="lblFlagged"
+                 VerticalOptions="StartAndExpand"
+                   FontSize="25"
+                 />
+            <Button CornerRadius="10" Margin="10,10,10,10"
+                Text="Review Questions"  x:Name="revQuestions"
+                Clicked="OnReviewClicked" FontSize="20" />
+            <Button CornerRadius="10" Margin="5,10,5,10"
+                Text="Main menu"  x:Name="mainQuestions"
+                Clicked="OnMainMenuClicked" FontSize="20" />
+        </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

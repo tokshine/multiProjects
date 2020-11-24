@@ -34,6 +34,16 @@ namespace MultiProjects
             //MainPage = new LoginPageWithStyling();//with different kind of styling |remember to enable styling in app.xaml --- DynamicResource
 
             //  MainPage = new ShivonetLogin();
+            // MainPage = new RoundEdges();
+            MainPage = new NavigationPage(new QuizPage())
+            {
+                BarBackgroundColor = Color.Gray
+            };
+
+            //MainPage = new NavigationPage(new SinglePageNavigationPage())
+            //{
+            //    BarBackgroundColor = Color.Gray
+            //};
 
             // MainPage = new FramedTextPage();
 
@@ -46,8 +56,8 @@ namespace MultiProjects
             // In fact, the TemplateBinding markup extension creates a Binding whose Source is RelativeBindingSource.TemplatedParent
             //TemplateBinding is an alternative for  RelativeBindingSource.TemplatedParent
             //MainPage = new RoundEdges();//lovely working using custom renderer
-          //  MainPage = new TriggerEntryValidation(); //chapter 23
-           MainPage = new CardBindToViewModel();
+            //  MainPage = new TriggerEntryValidation(); //chapter 23
+            // MainPage = new CardBindToViewModel();
         }
 
         protected override void OnStart()

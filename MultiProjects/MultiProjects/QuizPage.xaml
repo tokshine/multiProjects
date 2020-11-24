@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MultiProjects.QuizPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Margin="10,60,10,10" >
+            <Label Text="What's included within this app"  FontSize="20" TextColor="BlueViolet" Margin="0,0,0,30"/>
+            <Button CornerRadius="10" x:Name="csharp"
+                Text="C#"
+                Clicked="OnQuestionCategoryClicked" FontSize="16" />
+
+            <Button CornerRadius="10"
+                Text="ASP.NET"  x:Name="aspnet"
+                Clicked="OnQuestionCategoryClicked" FontSize="16" />
+            <Button CornerRadius="10"
+                Text="Design Patterns"  x:Name="designpatterns"
+                Clicked="OnQuestionCategoryClicked" FontSize="16" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

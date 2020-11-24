@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MultiProjects.SinglePageNavigationPage"
+              x:Name="page" BackgroundColor="Gray" >
+   
+  <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="answerStyle" TargetType="Button">
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="CornerRadius" Value="20" />
+                <Setter Property="BorderWidth" Value="1" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BackgroundColor" Value="Blue" />
+            </Style>
+
+            <Style x:Key="flagQuestionStyle" TargetType="Button">          
+                <Setter Property="BackgroundColor" Value="PaleVioletRed" />
+            </Style>
+
+            <Style x:Key="flagDefaultStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="LightGray" />
+            </Style>
+
+
+            <Style x:Key="selectedAnswerStyle" TargetType="Button">
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="CornerRadius" Value="20" />
+                <Setter Property="BorderWidth" Value="1" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BackgroundColor" Value="LightBlue" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+
+        <StackLayout
+             Margin="20,20" >
+            <StackLayout.Resources>
+                <ResourceDictionary>
+                    <Style x:Key="baseStyle" TargetType="View">
+                        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                    </Style>
+
+             
+
+                    <!--<Style TargetType="Button" BasedOn="{StaticResource baseStyle}">
+                        <Setter Property="HorizontalOptions" Value="Center" />
+                    </Style>-->
+
+                    <Style TargetType="Label" BasedOn="{StaticResource baseStyle}">
+                        <Setter Property="HorizontalTextAlignment" Value="Center" />
+                    </Style>
+                </ResourceDictionary>
+            </StackLayout.Resources>
+            <StackLayout Orientation="Horizontal"  Margin="0,0,0,10" >
+                <Button CornerRadius="10" Clicked="OnClickedHomePage"
+                Text="End Test"
+                FontSize="14"  HorizontalOptions="StartAndExpand" />
+                <Button CornerRadius="10"
+                        x:Name="flagQuestion"
+                        Clicked="OnFlagged"
+                         Style="{DynamicResource FlagButtonStyle}"
+                Text="Flag"
+                FontSize="14"  HorizontalOptions="EndAndExpand" />
+              
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"  Margin="0,0,0,20" >
+                <Label Text="{Binding Source={x:Reference page}, Path=Title}" FontSize="16" HorizontalOptions="StartAndExpand" />
+
+                <Label Text="{Binding Duration}" FontSize="16" HorizontalOptions="EndAndExpand" />
+            </StackLayout>
+
+            <Label x:Name="questionLabel"
+               Text=" "  TextColor="White"  />
+
+            <Label x:Name="instructionLabel"
+               Text="Choose ALL CORRECT answers"  TextColor="White" Margin="0,20,0,0" />
+            
+            <Button x:Name="answer1"
+                Text="Trump"
+                   Style="{DynamicResource ButtonStyle}"
+                Clicked="OnAnswer1"  />
+
+            <Button x:Name="answer2"
+                Text="Buhari"
+                      Style="{DynamicResource ButtonStyle}"
+                Clicked="OnAnswer1" />
+
+            <Button x:Name="answer3"
+                Text="Boris Johnson"
+                    Style="{DynamicResource ButtonStyle}"
+                Clicked="OnAnswer1" />
+
+
+            <Button x:Name="answer4"
+                Text="Boris Johnson"
+                    Style="{DynamicResource ButtonStyle}"
+                Clicked="OnAnswer1" />
+
+            <StackLayout Orientation="Horizontal"   Margin="0,60,0,10" >
+                <Button x:Name="modelessBackButton"
+                Text="Previous"    CornerRadius="10"
+                IsVisible="{Binding IsVisiblePrevNavButton}"
+                Clicked="OnGoBackModelessClicked" HorizontalOptions="StartAndExpand"/>
+
+                <Button x:Name="modelessGoToButton"
+                Text="Next" CornerRadius="10"
+                Clicked="OnGoToModelessClicked" HorizontalOptions="EndAndExpand"  
+                         IsVisible="{Binding IsVisiblePrevNavButton}"
+                        IsEnabled="{Binding IsVisibleNextNavButton}"    PropertyChanged="OnTimeoutPropertyChanged" />
+                <!--i almost used a  behaviour here but settle for PropertyChanged-->
+
+            </StackLayout>
+            <Button x:Name="finishButton"
+                Text="See Result" CornerRadius="10"
+                Clicked="OnGoToModelessFinishClicked" HorizontalOptions="CenterAndExpand"  />
+                    <!--<Button x:Name="modalGoToButton"
+                Text="Go to Modal Page"
+                Clicked="OnGoToModalClicked" />
+
+            <Button x:Name="modalBackButton"
+                Text="Back from Modal Page"
+                Clicked="OnGoBackModalClicked" />-->
+
+            <!--<Label x:Name="currentPageLabel"
+               Text=" " />
+
+            <Label x:Name="modelessStackLabel" 
+               Text=" " />-->
+
+            <!--<Label x:Name="modalStackLabel"
+               Text=" " />-->
+        </StackLayout>
+
+</ContentPage.Content>
+</ContentPage>
