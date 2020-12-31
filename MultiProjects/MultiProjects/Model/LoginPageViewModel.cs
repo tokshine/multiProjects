@@ -4,6 +4,7 @@ using Xamarin.Forms.Internals;
 
 namespace MultiProjects.Models
 {
+    ///material design
     /// <summary>
     /// ViewModel for login page.
     /// </summary>

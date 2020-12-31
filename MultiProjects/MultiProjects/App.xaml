@@ -11,8 +11,12 @@
                 <multiProjects:ColorDictionary />
                 <themes:LightTheme />
                 <!--<multiProjects:Styles />-->
-            </ResourceDictionary.MergedDictionaries>
+       </ResourceDictionary.MergedDictionaries>
 
+<!--Implicit Style -->
+            <Style TargetType="Button">
+                <Setter Property="Visual" Value="Material"></Setter>
+            </Style> 
             <!--<Style x:Key="RegularButtonStyle" TargetType="Button">
                 <Setter Property="HorizontalOptions" Value="Center"></Setter>
                 <Setter Property="VerticalOptions" Value="Start"></Setter>

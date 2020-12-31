@@ -20,7 +20,7 @@
             <Button CornerRadius="10" Margin="5,10,5,10"
                 Text="Main menu"  x:Name="mainQuestions"
                 Clicked="OnMainMenuClicked" FontSize="20" />
-            <StackLayout Orientation="Horizontal"  Margin="10,5,10,5">
+            <StackLayout Orientation="Horizontal"   Margin="0,5,0,5">
                 <Button CornerRadius="10" 
                 Text="All"
                        Style="{DynamicResource ButtonStyle}"
@@ -40,7 +40,7 @@
                 FontSize="12"   />
 
                 <Button CornerRadius="10"
-                Text="Flagged"
+                Text="Flag"
                         Clicked="OnClickedFlaggedQuestions"
                         x:Name="flagButton"
                 Style="{DynamicResource ButtonStyle}"
