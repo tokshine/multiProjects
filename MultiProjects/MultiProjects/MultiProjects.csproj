@@ -13,16 +13,22 @@
     <None Remove="Data\aspnet.json" />
     <None Remove="Data\csharp.json" />
     <None Remove="Data\designpatterns.json" />
+    <None Remove="Fonts\CabinSketch-Bold.ttf" />
+    <None Remove="Images\ThumbsDown.png" />
+    <None Remove="Images\ThumbsUp.png" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Data\aspnet.json" />
     <EmbeddedResource Include="Data\designpatterns.json" />
     <EmbeddedResource Include="Data\csharp.json" />
+    <EmbeddedResource Include="Fonts\CabinSketch-Bold.ttf" />
+    <EmbeddedResource Include="Images\ThumbsDown.png" />
+    <EmbeddedResource Include="Images\ThumbsUp.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.3.0.991250" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.800" />
     <PackageReference Include="Xamarin.Forms.PancakeView" Version="1.4.2" />
     <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.3.0.991250" />
   </ItemGroup>
@@ -59,6 +65,12 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="LoginWithStackLayout.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MainShell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MaterialLogin.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="ModalPageView.xaml">

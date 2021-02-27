@@ -27,13 +27,13 @@ namespace MultiProjects
 
         private void OnClickedCorrectQuestions(object sender, EventArgs args)
         {
-                Button button = (Button)sender;
+             //   Button button = (Button)sender;
             ResetButtons();
             var questions = QuestionData.GetQuestions.questions.Where(x=>x.IsCorrect);
 
                 AddButtonQuestionsStack(questions,Color.Blue);
 
-                button.Resources["ButtonStyle"] = Resources["highLightStyle"];
+               // button.Resources["ButtonStyle"] = Resources["highLightStyle"];
                 
          
         }
@@ -52,13 +52,13 @@ namespace MultiProjects
 
         private void OnClickedInCorrectQuestions(object sender, EventArgs args)
         {
-                Button button = (Button)sender;
+               // Button button = (Button)sender;
             ResetButtons();
             var questions = QuestionData.GetQuestions.questions.Where(x => !x.IsCorrect);
 
                 AddButtonQuestionsStack(questions,Color.Red);
 
-                button.Resources["ButtonStyle"] = Resources["highLightStyle"];
+              //  button.Resources["ButtonStyle"] = Resources["highLightStyle"];
 
            
         }
@@ -81,8 +81,8 @@ namespace MultiProjects
         {
             allButton.Resources["ButtonStyle"] = Resources["DefaultStyle"];
             flagButton.Resources["ButtonStyle"] = Resources["DefaultStyle"];
-            InCorrectButton.Resources["ButtonStyle"] = Resources["DefaultStyle"];
-            correctButton.Resources["ButtonStyle"] = Resources["DefaultStyle"];
+           // InCorrectButton.Resources["ButtonStyle"] = Resources["DefaultStyle"];
+           // correctButton.Resources["ButtonStyle"] = Resources["DefaultStyle"];
 
 
         }
@@ -91,6 +91,7 @@ namespace MultiProjects
         {
 
             var questions = QuestionData.GetQuestions.questions;
+            stackQuestions.Children.Clear();
             foreach (var q in questions)
             {
                 var color = Color.Red;

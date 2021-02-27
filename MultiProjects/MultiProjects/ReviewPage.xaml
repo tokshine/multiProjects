@@ -1,14 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                       Visual="Material"
+               xmlns:helpers="clr-namespace:MultiProjects.Helpers"
              x:Class="MultiProjects.ReviewPage">
 
-
     <ContentPage.Resources>
-        <ResourceDictionary>        
-            
+        <ResourceDictionary>
+            <OnPlatform x:Key="MaterialFontFamily" x:TypeArguments="x:String">
+                <On Platform="iOS" Value="Material Design Icons"/>
+                <On Platform="Android" Value="materialdesignicons-webfont.ttf#Material" />
+            </OnPlatform>
+        </ResourceDictionary>
+        <ResourceDictionary>       
             <Style x:Key="DefaultStyle" TargetType="Button">
-                <Setter Property="BackgroundColor" Value="LightGray" />
+                <Setter Property="BackgroundColor" Value="Black" />
             </Style>
             <Style x:Key="highLightStyle" TargetType="Button">
                 <Setter Property="BackgroundColor" Value="PaleVioletRed" />
@@ -21,30 +27,47 @@
                 Text="Main menu"  x:Name="mainQuestions"
                 Clicked="OnMainMenuClicked" FontSize="20" />
             <StackLayout Orientation="Horizontal"   Margin="0,5,0,5">
-                <Button CornerRadius="10" 
+                <Button CornerRadius="10" HorizontalOptions="CenterAndExpand"
                 Text="All"
                        Style="{DynamicResource ButtonStyle}"
                 FontSize="12"  x:Name="allButton" 
                         Clicked="OnClickedAllQuestions"
                         />
-                <Button CornerRadius="10"
-                Text="Correct"
+
+
+                <ImageButton Source=
+                        "{helpers:ImageResource MultiProjects.Images.ThumbsUp.png}"
+                   HorizontalOptions="CenterAndExpand"
+                    Clicked="OnClickedCorrectQuestions" />
+
+                <ImageButton Source=
+                        "{helpers:ImageResource MultiProjects.Images.ThumbsDown.png}"
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="OnClickedInCorrectQuestions" />
+
+                <!--<Button CornerRadius="10"
+                
                         Clicked="OnClickedCorrectQuestions"
                 Style="{DynamicResource ButtonStyle}"
-                FontSize="12"  x:Name="correctButton" />
-                <Button CornerRadius="10"
-                Text="Incorrect"
+                FontSize="12"  x:Name="correctButton"
+                        
+                        />-->
+                <!--<Button CornerRadius="10"
+                
                         Clicked="OnClickedInCorrectQuestions"
                 Style="{DynamicResource ButtonStyle}"
                         x:Name="InCorrectButton"
-                FontSize="12"   />
+                FontSize="12"   ImageSource="{FontImage FontFamily={StaticResource MaterialFontFamily},Glyph={x:Static helpers:IconFont.BookmarkRemove}}" 
+                />-->
 
                 <Button CornerRadius="10"
-                Text="Flag"
+                Text="Flagged"
                         Clicked="OnClickedFlaggedQuestions"
                         x:Name="flagButton"
+                         HorizontalOptions="CenterAndExpand"
                 Style="{DynamicResource ButtonStyle}"
-                FontSize="12"   />
+                FontSize="12"   ImageSource="{FontImage FontFamily={StaticResource MaterialFontFamily},Glyph={x:Static helpers:IconFont.FlagCheckered}}" 
+                />
             </StackLayout>
             <ScrollView>
                 <StackLayout Orientation="Vertical" Margin="10,5,10,5" x:Name="stackQuestions">

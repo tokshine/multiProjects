@@ -8,7 +8,7 @@ namespace MultiProjects.Droid
     [Activity(Label = "Quiz App", 
         Icon = "@drawable/icon", 
         Theme="@style/SplashTheme",
-        MainLauncher = true,
+        MainLauncher = false,
         NoHistory = true,
         ScreenOrientation = ScreenOrientation.Portrait)]
     public class SplashActivity : Activity

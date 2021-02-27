@@ -33,7 +33,7 @@ namespace MultiProjects
         }
 
         //private async void OnStartClicked(object sender, EventArgs args)
-        private  void OnStartClicked(object sender, EventArgs args)
+        private   void OnStartClicked(object sender, EventArgs args)
         {
 
             Application.Current.Properties["TimerStatus"] = "";
@@ -52,9 +52,11 @@ namespace MultiProjects
 
 
             //method 2
-           
-            App.Current.MainPage = new NavigationPage(new SinglePageNavigationPage());
-            
+
+             App.Current.MainPage = new NavigationPage(new SinglePageNavigationPage());
+
+            //await Navigation.PushAsync(new NavigationPage(new SinglePageNavigationPage()));
+
 
         }
     }

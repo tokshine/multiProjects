@@ -193,7 +193,7 @@ namespace MultiProjects
 
             Button button = (Button)sender;
 
-            if (button.BackgroundColor == Color.Blue)
+            if (button.BackgroundColor == Color.Purple)
             {
                 button.Resources["ButtonStyle"] = Resources["selectedAnswerStyle"];
             }
@@ -249,6 +249,12 @@ namespace MultiProjects
             //currentPageLabel.Text = String.Format("NavigationPage.CurrentPage = {0}",
             //                                      navPage.CurrentPage);
            var  questions = QuestionData.GetQuestions.questions.ToArray();
+
+            if (count < 1)
+            {
+                return;
+            }
+
 
             var whichQuestion = questions[count -1];
             _timerViewModel.Id = whichQuestion.Id;

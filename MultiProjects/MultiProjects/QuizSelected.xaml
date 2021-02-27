@@ -1,12 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MultiProjects.QuizSelected">
+             x:Class="MultiProjects.QuizSelected"
+              Visual="Material"
+             >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="MaterialFontFamily" x:TypeArguments="x:String">
+                <On Platform="iOS" Value="Material Design Icons"/>
+                <On Platform="Android" Value="materialdesignicons-webfont.ttf#Material" />
+            </OnPlatform>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical" Margin="10,60,10,20" >
+        <StackLayout Padding="20" HorizontalOptions="Center" VerticalOptions="Center">
             <Label Text="Welcome to Xamarin.Forms!...Introduction" x:Name="selectedQuiz"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" FontSize="20" TextColor="BlueViolet" />
+                HorizontalOptions="CenterAndExpand" FontSize="20" TextColor="Purple" />
 
             <Button CornerRadius="5"
                 Text="Get Started"

@@ -2,21 +2,47 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MultiProjects.QuizPage"
+             xmlns:helpers="clr-namespace:MultiProjects.Helpers"
              Visual="Material"
              >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="MaterialFontFamily" x:TypeArguments="x:String">
+                <On Platform="iOS" Value="Material Design Icons"/>
+                <On Platform="Android" Value="materialdesignicons-webfont.ttf#Material" />
+            </OnPlatform>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical" Margin="10,60,10,10" >
-            <Label Text="What's included within this app"  FontSize="20" TextColor="BlueViolet" Margin="0,0,0,30"/>
+        <StackLayout Orientation="Vertical" Margin="20,60,10,20" >
+           
+            <Label Text="What's included in this app"  FontSize="20"  Margin="0,0,0,30" TextColor="Purple"/>
+
+            <Button CornerRadius="10" x:Name="c1sharp"
+               BackgroundColor="PaleVioletRed"   
+                    HorizontalOptions="Center"
+               WidthRequest="50"
+                HeightRequest="50"                    
+                    ImageSource="{FontImage FontFamily={StaticResource MaterialFontFamily},Glyph={x:Static helpers:IconFont.BookCross}}"   
+                    />
+
             <Button CornerRadius="10" x:Name="csharp"
                 Text="C#"
-                Clicked="OnQuestionCategoryClicked" FontSize="16" />
+                   
+                Clicked="OnQuestionCategoryClicked" FontSize="16"
+                    ImageSource="{FontImage FontFamily={StaticResource MaterialFontFamily},Glyph={x:Static helpers:IconFont.Book}}"   
+                    />
 
-            <Button CornerRadius="10"
+            <Button CornerRadius="10" 
+                    
                 Text="ASP.NET"  x:Name="aspnet"
-                Clicked="OnQuestionCategoryClicked" FontSize="16" />
+                Clicked="OnQuestionCategoryClicked" FontSize="16" ImageSource="{FontImage FontFamily={StaticResource MaterialFontFamily},Glyph={x:Static helpers:IconFont.Book}}"   
+                    />
             <Button CornerRadius="10"
+                    
                 Text="Design Patterns"  x:Name="designpatterns"
-                Clicked="OnQuestionCategoryClicked" FontSize="16" />
+                Clicked="OnQuestionCategoryClicked" FontSize="16" ImageSource="{FontImage FontFamily={StaticResource MaterialFontFamily},Glyph={x:Static helpers:IconFont.Book}}"   
+                    />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:helpers="clr-namespace:MultiProjects.Helpers"
+             Shell.NavBarIsVisible="False"
+             Visual="Material"
+             x:Class="MultiProjects.MaterialLogin">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="MaterialFontFamily" x:TypeArguments="x:String">
+                <On Platform="iOS" Value="Material Design Icons"/>
+                <On Platform="Android" Value="materialdesignicons-webfont.ttf#Material" />
+            </OnPlatform>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="20" HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="Login Form"
+                   FontSize="60"
+                   TextColor="Purple"
+                   HorizontalTextAlignment="Center"
+                   FontFamily="CabinSketch"
+                   
+              />
+            <Image Source="https://www.seoclerk.com/pics/551103-1T0qFD1502285018.jpg" HorizontalOptions="Center"/>
+
+            <Entry Placeholder="Enter Username" />
+            <Entry Placeholder="Enter Password" IsPassword="True" />
+
+            <Button Text="Login" BackgroundColor="Purple" TextColor="White" 
+                    ImageSource="{FontImage FontFamily={StaticResource MaterialFontFamily},Glyph={x:Static helpers:IconFont.Login}}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
