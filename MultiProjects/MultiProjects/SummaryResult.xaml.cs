@@ -35,6 +35,29 @@ namespace MultiProjects
             lblIncorrect.Text = string.Format("Incorrect: {0}/{1}", notAnswered, questions.Count);
 
             lblFlagged.Text = string.Format("Flagged: {0}", flagged);
+            lblGrade.IsVisible = true;
+            if (answered == questions.Count)
+            {                
+                lblGrade.Text = "Excellent!";
+            }
+            if (answered == questions.Count/2)
+            {
+                lblGrade.Text = "Fair Enough!";
+            }
+            if (answered < questions.Count / 2)
+            {
+                lblGrade.Text = "Not Good Enough!";
+            }
+
+            if (answered > (questions.Count / 2) && answered < questions.Count )
+            {
+                lblGrade.Text = "Good Enough!";
+            }
+
+            if (answered <= 2)
+            {
+                lblGrade.Text = "Too Bad!";
+            }
         }
 
         async void OnReviewClicked(object sender, EventArgs args)

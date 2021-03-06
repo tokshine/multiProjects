@@ -4,6 +4,7 @@
              x:Class="MultiProjects.SummaryResult"
              xmlns:helpers="clr-namespace:MultiProjects.Helpers"
               Visual="Material"
+             BackgroundColor="Purple"
              >
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -17,18 +18,18 @@
 
         <!--<StackLayout Margin="20,5,10,10">-->
 
-            <StackLayout Padding="20" HorizontalOptions="Center" VerticalOptions="Center">
+        <StackLayout Margin="30,10,10,10"
+                         HorizontalOptions="Center" VerticalOptions="Center"
+                     >
                 <Label Text="Quiz Result"
                
                 HorizontalOptions="CenterAndExpand"
                    HorizontalTextAlignment="Center"
                    FontSize="30"
-                   TextColor="Purple"                 
+                   TextColor="White"                 
                        
                  />
-            <StackLayout Margin="20,80,10,10">
-              
-                    <Label Text="Correct"
+            <Label Text="Correct"
                    x:Name="lblCorrect"
                 VerticalOptions="StartAndExpand"
                    FontSize="25"
@@ -43,7 +44,16 @@
                  VerticalOptions="StartAndExpand"
                    FontSize="25"
                  />
-            <Button CornerRadius="10" Margin="10,10,10,10"
+            <StackLayout Margin="20,80,10,10">
+                <Label Text=""
+                   x:Name="lblGrade"
+                 VerticalOptions="StartAndExpand"
+                   FontSize="50"
+                       TextColor="Goldenrod"
+                       IsVisible="false"
+                 />
+
+                <Button CornerRadius="10" Margin="10,10,10,10"
                 Text="Review Questions"  x:Name="revQuestions"
                 Clicked="OnReviewClicked" FontSize="20" />
             <Button CornerRadius="10" Margin="5,10,5,10"
