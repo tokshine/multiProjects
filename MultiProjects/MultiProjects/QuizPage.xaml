@@ -18,7 +18,16 @@
            
             <Label Text="What's included in this app"  FontSize="20"  Margin="0,0,0,30" TextColor="Purple"/>
 
-        
+            <!--<Button CornerRadius="10" x:Name="c1sharp"
+               BackgroundColor="#594EEA"   
+                    HorizontalOptions="Center"
+                    Text="Dot Net bleat" 
+                    TextColor="White"
+                    FontSize="130"
+               WidthRequest="1024"
+                HeightRequest="520" 
+                    
+                        />-->
 
             <Button CornerRadius="10" x:Name="csharp"
                 Text="C#"
