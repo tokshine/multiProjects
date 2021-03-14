@@ -7,11 +7,11 @@
     xmlns:multiProjects="clr-namespace:MultiProjects;assembly=MultiProjects">
   <Application.Resources>
     <ResourceDictionary>
-      <ResourceDictionary.MergedDictionaries>
+      <!--<ResourceDictionary.MergedDictionaries>
                 <multiProjects:ColorDictionary />
                 <themes:LightTheme />
-                <!--<multiProjects:Styles />-->
-       </ResourceDictionary.MergedDictionaries>
+                --><!--<multiProjects:Styles />--><!--
+       </ResourceDictionary.MergedDictionaries>-->
 
 <!--Implicit Style -->
             <Style TargetType="Button">
