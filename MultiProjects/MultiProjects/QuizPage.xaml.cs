@@ -14,8 +14,8 @@ namespace MultiProjects
 	{
 		public QuizPage ()
 		{
-			InitializeComponent ();
-		}
+			InitializeComponent ();           
+        }
 
         private async void OnQuestionCategoryClicked(object sender, EventArgs args)
         {

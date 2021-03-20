@@ -66,6 +66,9 @@
                 </ResourceDictionary>
             </StackLayout.Resources>
             <StackLayout Orientation="Horizontal"  Margin="0,0,0,10" >
+                <Label Text="" x:Name="subject" FontSize="16" HorizontalOptions="CenterAndExpand"  TextColor="Purple" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"  Margin="0,0,0,10" >
                 <Button CornerRadius="10" Clicked="OnClickedHomePage"
                 Text="End Test"
                 FontSize="14"  HorizontalOptions="StartAndExpand"

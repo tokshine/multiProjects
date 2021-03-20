@@ -21,7 +21,7 @@ namespace MultiProjects
 
             AddButtonAllQuestions();
 
-
+            Title = Application.Current.Properties["subjectLabel"].ToString();
 
         }
 

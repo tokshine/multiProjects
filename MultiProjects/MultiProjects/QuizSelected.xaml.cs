@@ -19,14 +19,18 @@ namespace MultiProjects
             if (subject == "csharp")
             {
                 selectedQuiz.Text = "Welcome to C# Quiz";
+                Application.Current.Properties["subjectLabel"] = "C# Quiz";
             }
             if (subject == "aspnet")
             {
                 selectedQuiz.Text = "Welcome to ASP.NET Quiz";
+                Application.Current.Properties["subjectLabel"] = "ASP.NET Quiz";
             }
             if (subject == "designpatterns")
             {
                 selectedQuiz.Text = "Welcome to Design Patterns Quiz";
+                Application.Current.Properties["subjectLabel"] = "Design Patterns Quiz";
+
             }
             Application.Current.Properties["subject"] = subject;
             Application.Current.Properties["IsNewQuiz"] = true;
@@ -35,6 +39,8 @@ namespace MultiProjects
         //private async void OnStartClicked(object sender, EventArgs args)
         private   void OnStartClicked(object sender, EventArgs args)
         {
+
+            var subject = Application.Current.Properties["subject"];
 
             Application.Current.Properties["TimerStatus"] = "";
             //change page root

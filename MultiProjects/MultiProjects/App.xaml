@@ -3,8 +3,7 @@
     x:Class="MultiProjects.App"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:themes="clr-namespace:MultiProjects.Themes;assembly=MultiProjects"
-    xmlns:multiProjects="clr-namespace:MultiProjects;assembly=MultiProjects">
+>
   <Application.Resources>
     <ResourceDictionary>
       <!--<ResourceDictionary.MergedDictionaries>

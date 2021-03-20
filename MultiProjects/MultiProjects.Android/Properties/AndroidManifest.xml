@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="Prod Release" package="com.companyname.quizbleat" android:installLocation="auto" android:versionCode="2">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.companyname.quizbleat" android:installLocation="auto" android:versionCode="3" android:versionName="0.0.2">
 	<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="29" />
-	<application android:label="quizbleat" android:icon="@drawable/iq"></application>
+	<application android:label="quizbleat" android:icon="@drawable/icon"></application>
 </manifest>

@@ -4,7 +4,7 @@
              x:Class="MultiProjects.SummaryResult"
              xmlns:helpers="clr-namespace:MultiProjects.Helpers"
               Visual="Material"
-             BackgroundColor="Purple"
+             
              >
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -16,33 +16,38 @@
     </ContentPage.Resources>
     <ContentPage.Content>
 
-        <!--<StackLayout Margin="20,5,10,10">-->
+        <!--<StackLayout Margin="20,5,10,10">-->      
+        
 
+        
         <StackLayout Margin="30,10,10,10"
                          HorizontalOptions="Center" VerticalOptions="Center"
                      >
-                <Label Text="Quiz Result"
+                <Label Text="Quiz Result" x:Name="quizResult"
                
                 HorizontalOptions="CenterAndExpand"
                    HorizontalTextAlignment="Center"
-                   FontSize="30"
-                   TextColor="White"                 
-                       
+                   FontSize="30"                                
+                       TextColor="Purple"
+                        Margin="0,0,0,30"
                  />
             <Label Text="Correct"
                    x:Name="lblCorrect"
                 VerticalOptions="StartAndExpand"
                    FontSize="25"
+                   TextColor="Black"
                  />
             <Label Text="Incorrect"
                    x:Name="lblIncorrect"
                 VerticalOptions="StartAndExpand"
                    FontSize="25"
+                    TextColor="Black"
                  />
             <Label Text="Flagged"
                    x:Name="lblFlagged"
                  VerticalOptions="StartAndExpand"
                    FontSize="25"
+                    TextColor="Black"
                  />
             <StackLayout Margin="20,80,10,10">
                 <Label Text=""
@@ -53,6 +58,11 @@
                        IsVisible="false"
                  />
 
+
+                <Button CornerRadius="10" Margin="10,10,10,10"
+                Text="Retry Quiz"  x:Name="retryQuiz"
+                Clicked="OnRetryQuizClicked" FontSize="20" />
+                
                 <Button CornerRadius="10" Margin="10,10,10,10"
                 Text="Review Questions"  x:Name="revQuestions"
                 Clicked="OnReviewClicked" FontSize="20" />

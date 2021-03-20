@@ -5,6 +5,7 @@ using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)] 
 //commented this to avoid conflict with Assemblyinfo
+//icon stuff
 
 namespace MultiProjects
 {
@@ -39,7 +40,7 @@ namespace MultiProjects
             // MainPage = new RoundEdges();
             MainPage = new NavigationPage(new QuizPage())
             {
-                BarBackgroundColor = Color.Gray
+                //BarBackgroundColor = Color.Gray
             };
 
             //   MainPage = new MaterialLogin(); //probably best graphic

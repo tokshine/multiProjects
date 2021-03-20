@@ -4,6 +4,7 @@
              x:Class="MultiProjects.QuizPage"
              xmlns:helpers="clr-namespace:MultiProjects.Helpers"
              Visual="Material"
+              Icon="icon.png"
              >
     <ContentPage.Resources>
         <ResourceDictionary>

@@ -31,7 +31,7 @@ namespace MultiProjects
     public partial class SinglePageNavigationPage : ContentPage
     {
         static int count = 0;
-        static bool firstPageAppeared = false;
+        //static bool firstPageAppeared = false;
         static readonly string separator = new string('-', 20);
 
        static TimerViewModel _timerViewModel;
@@ -46,7 +46,7 @@ namespace MultiProjects
                 // _timerViewModel.StartTime = TimeSpan.FromSeconds(0);
                 _timerViewModel = null;
                 count = 0;
-                firstPageAppeared = false;
+              //  firstPageAppeared = false;
                 Application.Current.Properties["TimerStatus"] = string.Empty;
                 await Navigation.PushAsync(new SummaryResult());
             }
@@ -56,6 +56,7 @@ namespace MultiProjects
         {
 
             NavigationPage.SetHasNavigationBar(this, false);
+            //NavigationPage.TitleProperty
             InitializeComponent();
 
             Resources["ButtonStyle"] = Resources["answerStyle"];
@@ -70,7 +71,7 @@ namespace MultiProjects
             {
                 var subject = Application.Current.Properties["subject"] + ".json";
                 QuestionData.InitialiseQuestions(subject);           
-                Application.Current.Properties["IsNewQuiz"] = false;
+               // Application.Current.Properties["IsNewQuiz"] = false;
             }           
 
 
@@ -84,9 +85,10 @@ namespace MultiProjects
                 QuestionData.GetQuestions.Reset();                   
                 _timerViewModel = new TimerViewModel();               
                 _timerViewModel.IsVisiblePrevNavButton = true;
-                //_timerViewModel.IsVisibleFinishButton = false;
+                //_timerViewModel.IsVisibleFinishButton = false;                
                 Application.Current.Properties["TimerStatus"] = "Started";
             }
+            subject.Text = Application.Current.Properties["subjectLabel"].ToString();
             var numberOfQuestions = QuestionData.GetQuestions.questions.Count;
             Title = "Q" + questionNumber + " of " + numberOfQuestions;
             BindingContext = _timerViewModel;
@@ -99,7 +101,7 @@ namespace MultiProjects
             // _timerViewModel.StartTime = TimeSpan.FromSeconds(0);
             _timerViewModel = null;
             count = 0;
-            firstPageAppeared = false;
+          //  firstPageAppeared = false;
             Application.Current.Properties["TimerStatus"] = string.Empty;
             await Navigation.PushAsync(new SummaryResult());           
             
@@ -108,11 +110,11 @@ namespace MultiProjects
         async void OnGoToModelessClicked(object sender, EventArgs args)
         {
             SinglePageNavigationPage newPage = new SinglePageNavigationPage();
-            Debug.WriteLine(separator);
-            Debug.WriteLine("Calling PushAsync from {0} to {1}", this, newPage);
+            //Debug.WriteLine(separator);
+            //Debug.WriteLine("Calling PushAsync from {0} to {1}", this, newPage);
             await Navigation.PushAsync(newPage);
-            Debug.WriteLine("PushAsync completed");
-
+            //Debug.WriteLine("PushAsync completed");
+            //
             // Display the page stack information on this page.
             newPage.DisplayInfo();
         }
@@ -122,11 +124,11 @@ namespace MultiProjects
         
         async void OnGoBackModelessClicked(object sender, EventArgs args)
         {
-            Debug.WriteLine(separator);
-            Debug.WriteLine("Calling PopAsync from {0}", this);
+            //Debug.WriteLine(separator);
+            //Debug.WriteLine("Calling PopAsync from {0}", this);
             Page page = await Navigation.PopAsync();
             count--;
-            Debug.WriteLine("PopAsync completed and returned {0}", page);
+            //Debug.WriteLine("PopAsync completed and returned {0}", page);
 
             // Display the page stack information on the page being returned to.
             NavigationPage navPage = (NavigationPage)App.Current.MainPage;
@@ -169,11 +171,11 @@ namespace MultiProjects
             count = 0;
             _timerViewModel = null;
             Application.Current.Properties["TimerStatus"] = string.Empty;
-            firstPageAppeared = false;
+           // firstPageAppeared = false;
             App.Current.MainPage = new NavigationPage(new QuizPage());
         }
 
-        async void OnFlagged(object sender, EventArgs args)
+         void OnFlagged(object sender, EventArgs args)
         {
             Button button = (Button)sender;
             if (button.BackgroundColor == Color.LightGray)
@@ -188,7 +190,7 @@ namespace MultiProjects
 
         }
 
-        async void OnAnswer1(object sender, EventArgs args)
+         void OnAnswer1(object sender, EventArgs args)
         {
 
             Button button = (Button)sender;
@@ -220,19 +222,20 @@ namespace MultiProjects
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            Debug.WriteLine("{0} OnAppearing", Title);
+           // Debug.WriteLine("{0} OnAppearing", Title);
 
-            if (!firstPageAppeared)
+            if ((bool)Application.Current.Properties["IsNewQuiz"])
             {
                 DisplayInfo();
-                firstPageAppeared = true;
+                Application.Current.Properties["IsNewQuiz"] = false;
+                //firstPageAppeared = true;
             }
         }
 
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
-            Debug.WriteLine("{0} OnDisappearing", Title);
+            //Debug.WriteLine("{0} OnDisappearing", Title);
         }
 
         // Identify each instance by its Title.

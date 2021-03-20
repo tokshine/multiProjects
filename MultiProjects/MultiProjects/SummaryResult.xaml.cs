@@ -18,6 +18,7 @@ namespace MultiProjects
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent ();
             Result();
+            quizResult.Text = Application.Current.Properties["subjectLabel"].ToString();
         }
 
         private void Result()
@@ -59,6 +60,13 @@ namespace MultiProjects
                 lblGrade.Text = "Too Bad!";
             }
         }
+
+        async void OnRetryQuizClicked(object sender, EventArgs args)
+        {
+            var subject = Application.Current.Properties["subject"].ToString();
+            await Navigation.PushAsync(new QuizSelected(subject));
+        }
+
 
         async void OnReviewClicked(object sender, EventArgs args)
         {
