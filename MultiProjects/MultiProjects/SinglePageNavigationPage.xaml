@@ -45,7 +45,7 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-
+        <ScrollView>
         <StackLayout
              Margin="20,20" >
             <StackLayout.Resources>
@@ -164,6 +164,6 @@
             <!--<Label x:Name="modalStackLabel"
                Text=" " />-->
         </StackLayout>
-
-</ContentPage.Content>
+        </ScrollView>
+    </ContentPage.Content>
 </ContentPage>
