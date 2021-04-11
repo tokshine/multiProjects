@@ -5,6 +5,8 @@
              xmlns:helpers="clr-namespace:MultiProjects.Helpers"
              Visual="Material"
               Icon="icon.png"
+           Title="Tech Brain Teasers"
+            
              >
     <ContentPage.Resources>
         <ResourceDictionary>

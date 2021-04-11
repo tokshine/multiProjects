@@ -40,7 +40,7 @@ namespace MultiProjects
             // MainPage = new RoundEdges();
             MainPage = new NavigationPage(new QuizPage())
             {
-                //BarBackgroundColor = Color.Gray
+               // BarBackgroundColor = Color.Gainsboro
             };
 
             //   MainPage = new MaterialLogin(); //probably best graphic
