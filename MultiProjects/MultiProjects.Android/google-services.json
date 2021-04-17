@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "334574478674",
+    "project_id": "test-49c6e",
+    "storage_bucket": "test-49c6e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:334574478674:android:dd5748c552c0895069868b",
+        "android_client_info": {
+          "package_name": "com.companyname.quizbleat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "334574478674-0b7reugruokdrs5rt2bokbnq4eq1d6a7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3LNbFkZSumB7YRPseR0QSTcBhYL5hopw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "334574478674-0b7reugruokdrs5rt2bokbnq4eq1d6a7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
